@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+<style>
+  .bg { fill:#f7fafc; }
+  .navy { fill:#162a3e; }
+  .teal { fill:#159a97; }
+  .blue { fill:#2b6cb0; }
+  .green { fill:#2f855a; }
+  .orange { fill:#d69e2e; }
+  .card { fill:#ffffff; stroke:#cbd5e0; stroke-width:2; }
+  .title { font:700 42px Arial,sans-serif; fill:#162a3e; }
+  .subtitle { font:22px Arial,sans-serif; fill:#596a78; }
+  .h1 { font:700 24px Arial,sans-serif; fill:white; }
+  .h2 { font:700 20px Arial,sans-serif; fill:#162a3e; }
+  .txt { font:17px Arial,sans-serif; fill:#243746; }
+  .small { font:15px Arial,sans-serif; fill:#596a78; }
+  .ok { font:700 15px Arial,sans-serif; fill:#2f855a; }
+</style>
+
+<rect class="bg" x="0" y="0" width="1600" height="1050"/>
+
+<text x="50" y="65" class="title">MAPA LAB-U — WINDOWS SERVER / AD / VIRTUALBOX / BACKUP</text>
+<text x="50" y="105" class="subtitle">Publiczna wersja infrastruktury — adresacja zanonimizowana</text>
+<rect x="50" y="125" width="420" height="7" class="teal"/>
+
+<!-- network -->
+<rect x="50" y="165" rx="20" ry="20" width="1500" height="110" class="card"/>
+<text x="80" y="205" class="h2">Sophos XG Home</text>
+<text x="80" y="240" class="txt">192.0.2.1/24 • główna brama / firewall LAB-u</text>
+<text x="660" y="210" class="h2">LAN LAB: 192.0.2.0/24</text>
+<text x="1260" y="210" class="h2">Tailscale</text>
+
+<!-- headers -->
+<rect x="50" y="310" rx="12" width="480" height="48" class="navy"/>
+<text x="70" y="342" class="h1">WINDOWS / ACTIVE DIRECTORY</text>
+
+<rect x="560" y="310" rx="12" width="500" height="48" class="navy"/>
+<text x="580" y="342" class="h1">DEBIAN AI / VIRTUALBOX</text>
+
+<rect x="1090" y="310" rx="12" width="460" height="48" class="navy"/>
+<text x="1110" y="342" class="h1">BACKUP / MONITORING</text>
+
+<!-- server -->
+<rect x="50" y="385" width="480" height="290" class="card"/>
+<rect x="50" y="385" width="480" height="48" class="navy"/>
+<text x="70" y="417" class="h1">Windows Server 2019 — SERVER / NDIS</text>
+<text x="75" y="465" class="h2">Oddzielny komputer fizyczny</text>
+<text x="75" y="500" class="txt">LAN: 192.0.2.10</text>
+<text x="75" y="532" class="txt">Domena: lysy.server</text>
+<text x="75" y="564" class="txt">DNS: 192.0.2.10</text>
+<text x="75" y="596" class="txt">AD DS • DNS • LAPS</text>
+<text x="75" y="628" class="txt">RDP 3389 • SSH 22 • WinRM 5985</text>
+<rect x="50" y="385" width="8" height="290" class="blue"/>
+
+<!-- lenovo -->
+<rect x="50" y="705" width="480" height="220" class="card"/>
+<rect x="50" y="705" width="480" height="48" class="navy"/>
+<text x="70" y="737" class="h1">Proxmox Lenovo + Windows 10</text>
+<text x="75" y="785" class="txt">Proxmox VE: 192.0.2.50</text>
+<text x="75" y="817" class="txt">Windows 10 VM na Proxmox</text>
+<text x="75" y="849" class="h2">Plan: dołączenie do domeny</text>
+<text x="75" y="881" class="txt">GPO • uprawnienia • monitoring</text>
+<rect x="50" y="705" width="8" height="220" class="teal"/>
+
+<!-- debian -->
+<rect x="560" y="385" width="500" height="290" class="card"/>
+<rect x="560" y="385" width="500" height="48" class="navy"/>
+<text x="580" y="417" class="h1">Debian AI — host VirtualBox</text>
+<text x="585" y="465" class="txt">LAN: 198.51.100.20</text>
+<text x="585" y="497" class="txt">Debian 13</text>
+<text x="585" y="529" class="txt">VirtualBox 7.2.20</text>
+<text x="585" y="561" class="txt">VirtualBox wyłącznie na Debian AI</text>
+<text x="585" y="593" class="txt">SSH / xrdp do administracji</text>
+<text x="585" y="625" class="txt">Host testowych stacji Windows</text>
+<rect x="560" y="385" width="8" height="290" class="teal"/>
+
+<!-- VMs -->
+<rect x="560" y="705" width="500" height="220" class="card"/>
+<rect x="560" y="705" width="500" height="48" class="navy"/>
+<text x="580" y="737" class="h1">Maszyny Windows w VirtualBox</text>
+
+<rect x="585" y="780" rx="10" width="450" height="52" fill="#edf2f7"/>
+<text x="605" y="812" class="h2">K-01 • Windows 10 Pro • 198.51.100.60</text>
+<text x="820" y="860" class="ok">DOŁĄCZONY DO DOMENY</text>
+
+<rect x="585" y="875" rx="10" width="450" height="38" fill="#edf2f7"/>
+<text x="605" y="900" class="txt">Windows 11 VM • rozwijany</text>
+
+<!-- backup -->
+<rect x="1090" y="385" width="460" height="250" class="card"/>
+<rect x="1090" y="385" width="460" height="48" class="navy"/>
+<text x="1110" y="417" class="h1">Backup / Recovery</text>
+<text x="1115" y="465" class="txt">PBS: 203.0.113.30</text>
+<text x="1115" y="497" class="txt">UrBackup: 198.51.100.40:55414</text>
+<text x="1115" y="529" class="h2">Veeam: wdrażany</text>
+<text x="1115" y="561" class="txt">Kopie VM / stacji / danych</text>
+<text x="1115" y="593" class="small">TrueNAS nie jest już używany</text>
+<rect x="1090" y="385" width="8" height="250" class="green"/>
+
+<!-- monitoring -->
+<rect x="1090" y="665" width="460" height="260" class="card"/>
+<rect x="1090" y="665" width="460" height="48" class="navy"/>
+<text x="1110" y="697" class="h1">Monitoring / Security / AI</text>
+<text x="1115" y="745" class="txt">Zabbix: 203.0.113.70</text>
+<text x="1115" y="777" class="txt">Wazuh: 192.0.2.80</text>
+<text x="1115" y="809" class="txt">Nessus: 198.51.100.90</text>
+<text x="1115" y="841" class="txt">IDS-Pi: 203.0.113.100</text>
+<text x="1115" y="873" class="txt">Jetson: 203.0.113.110</text>
+<text x="1115" y="905" class="txt">n8n: 192.0.2.120</text>
+<rect x="1090" y="665" width="8" height="260" class="orange"/>
+
+<!-- footer -->
+<rect x="50" y="965" rx="12" width="1500" height="48" class="navy"/>
+<text x="70" y="997" class="h1">Adresy wykorzystują zakresy TEST-NET przeznaczone do dokumentacji</text>
+</svg>
