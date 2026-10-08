@@ -2,7 +2,7 @@
 
 Ta część mojego homelabu koncentruje się na administracji środowiskiem Windows, Active Directory, DNS, zdalnym zarządzaniu stacjami oraz integracji maszyn Windows uruchomionych na VirtualBox i Proxmox VE.
 
-![Aktualna mapa LAB-u](assets/lab-architecture.png)
+![Aktualna mapa LAB-u](assets/lab-architecture.svg)
 
 ## Najważniejsze założenia
 
