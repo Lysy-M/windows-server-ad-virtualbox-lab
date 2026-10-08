@@ -93,7 +93,6 @@
 <text x="1115" y="497" class="txt">UrBackup: 198.51.100.40:55414</text>
 <text x="1115" y="529" class="h2">Veeam: wdrażany</text>
 <text x="1115" y="561" class="txt">Kopie VM / stacji / danych</text>
-<text x="1115" y="593" class="small">TrueNAS nie jest już używany</text>
 <rect x="1090" y="385" width="8" height="250" class="green"/>
 
 <!-- monitoring -->

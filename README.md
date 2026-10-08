@@ -11,7 +11,6 @@ Ta część mojego homelabu koncentruje się na administracji środowiskiem Wind
 - Stacje Windows 10/11 są stopniowo dołączane do domeny `lysy.server`.
 - Windows 10 na Proxmox Lenovo jest kolejną maszyną planowaną do dołączenia do domeny.
 - Backup opiera się na **PBS + UrBackup**, a **Veeam jest obecnie wdrażany**.
-- TrueNAS nie jest już elementem aktualnej architektury tego projektu.
 
 ## Windows Server 2019 — SERVER / NDIS
 
@@ -20,9 +19,9 @@ Ta część mojego homelabu koncentruje się na administracji środowiskiem Wind
 | Host | `SERVER` |
 | Sprzęt | oddzielny komputer fizyczny `NDIS` |
 | System | Windows Server 2019 Standard |
-| LAN | `10.11.11.178/24` |
+| LAN | `192.0.2.10/24` |
 | Domena | `lysy.server` |
-| DNS | `10.11.11.178` |
+| DNS | `192.0.2.10` |
 | SSH | `22/tcp` |
 | RDP | `3389/tcp` |
 | WinRM | `5985/tcp` |
@@ -44,7 +43,7 @@ Debian AI jest dedykowanym hostem VirtualBox.
 | Parametr | Wartość |
 |---|---|
 | Host | Debian AI |
-| LAN | `10.11.11.205` |
+| LAN | `198.51.100.20` |
 | System | Debian 13 |
 | VirtualBox | `7.2.20` |
 
@@ -54,7 +53,7 @@ VirtualBox nie jest instalowany na Windows Server.
 
 #### K-01
 - Windows 10 Pro
-- `10.11.11.27`
+- `198.51.100.60`
 - FQDN: `K-01.lysy.server`
 - maszyna dołączona do domeny
 
@@ -71,7 +70,7 @@ Docelowo środowisko VirtualBox ma obejmować:
 
 Na hoście Proxmox Lenovo działa dodatkowa maszyna Windows 10.
 
-- Proxmox Lenovo: `10.11.11.180`
+- Proxmox Lenovo: `192.0.2.50`
 - Windows 10: maszyna testowa
 - plan: dołączenie do domeny `lysy.server`
 - cel: testy centralnego zarządzania, GPO, uprawnień, monitoringu i zdalnej administracji
@@ -80,11 +79,10 @@ Na hoście Proxmox Lenovo działa dodatkowa maszyna Windows 10.
 
 Aktualny kierunek:
 
-- **Proxmox Backup Server** — `10.11.11.200`
-- **UrBackup** — `10.11.11.249:55414`
+- **Proxmox Backup Server** — `203.0.113.30`
+- **UrBackup** — `198.51.100.40:55414`
 - **Veeam** — wdrażany dla środowiska Windows
 
-TrueNAS nie jest już używany w tej części LAB-u.
 
 ## Monitoring i bezpieczeństwo
 
@@ -92,12 +90,12 @@ TrueNAS nie jest już używany w tej części LAB-u.
 
 | Usługa | Adres |
 |---|---|
-| Zabbix | `10.11.11.163` |
-| Wazuh | `10.11.11.222` |
-| Nessus | `10.11.11.107` |
-| IDS-Pi / Suricata / EveBox | `10.11.11.246` |
-| Jetson / AI-SOC | `10.11.11.247` |
-| n8n | `10.11.11.215` |
+| Zabbix | `203.0.113.70` |
+| Wazuh | `192.0.2.80` |
+| Nessus | `198.51.100.90` |
+| IDS-Pi / Suricata / EveBox | `203.0.113.100` |
+| Jetson / AI-SOC | `203.0.113.110` |
+| n8n | `192.0.2.120` |
 
 ## Zakres praktyczny
 
